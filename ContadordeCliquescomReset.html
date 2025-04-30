@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt/BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CONTADOR DE CLIQUES</h1>
+
+    <h2>Clique até cansar ou desestressar, hehehehehe!</h2>
+    
+    <div id="Resultado">0</div>
+    
+    <button id="BotaoCliques">Clique!</button>
+    <button id="BotaoReset">Limpar.</button>
+    
+
+    <script>
+        let Resultado = 0;
+    
+        const divResultado = document.getElementById("Resultado");
+        const BotaoCliques = document.getElementById("BotaoCliques");
+        const BotaoReset = document.getElementById("BotaoReset");
+    
+        BotaoCliques.addEventListener("click", () => {
+          Resultado++;
+          divResultado.textContent = Resultado;
+        });
+    
+        BotaoReset.addEventListener("click", () => {
+            Resultado = 0
+            divResultado.textContent = Resultado;
+        });
+      </script>    
+</body>
+</html>
+
+
+<!-- PROMPT CHATGPT: "preciso criar um contador de cliques no qual conste um botao de cliques, um botao para resetar e uma div em que o número total de cliques seja apresentado". -->

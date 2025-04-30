@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>SIMULADOR DE LOGIN</h1>
+
+    <label for="Usuario">Usuário:</label>
+    <input type="text" id="Usuario" placeholder="Digite o seu Usuário!">
+
+
+    <label for="Senha">Senha:</label>
+    <input type="password" id="Senha" placeholder="Digite a sua Senha!">
+
+    <button onclick="EfetuarLogin()">Login</button>
+
+    <div id="Mensagem"></div>
+
+    <script>
+
+        const UsuarioFixo = "RAQUELFVD";
+        const SenhaFixa = "123456";
+
+
+        function EfetuarLogin() {
+
+            var Usuario = document.getElementById("Usuario").value.trim();
+            var Senha = document.getElementById("Senha").value.trim();
+            var Mensagem = document.getElementById("Mensagem");
+
+
+            if (Usuario === UsuarioFixo && Senha === SenhaFixa) {
+                Mensagem.textContent = "Login efetuado com sucesso!";
+            } else {
+                Mensagem.textContent = "Usuário ou senha digitados incorretos.";
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+
+
+<!-- PROMPT'S CHATGPT: "como definir um usuário e uma senha fixos no código em javascript"; "PRECISO CRIAR UM SIMULADOR DE LOGIN QUE CONTENHA UM INPUT DE USUÁRIO E UM IMPUT DE SENHA FIXOS NO CÓDIGO, UM BOTÃO DE LOGIN E UMA DIV QUE MOSTRA SE O LOGIN FOI EFETUADO COM SUCESSO OU NÃO."; "VERIFICA QUAL É O PROBLEMA DESSE CÓDIGO"; "<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>SIMULADOR DE LOGIN</h1>
+
+    <label for="Usuario">Usuário:</label>
+    <input type="text" id="Usuario" placeholder="Digite o seu Usuário!">
+
+
+    <label for="Senha">Senha:</label>
+    <input type="password" id="Senha" placeholder="Digite a sua Senha!">
+
+    <button onclick="EfetuarLogin()">Login</button>
+
+    <div id="Mensagem"></div>
+
+    <script>
+
+        const UsuarioFixo = "RaquelFVD";
+        const SenhaFixa = 123456;
+
+
+        function EfetuarLogin() {
+
+            var Usuario = document.getElementById("Usuario").value.trim();
+            var Senha = document.getElementById("Senha").value.trim();
+            var Mensagem = document.getElementById("Mensagem");
+
+
+            if (Usuario === UsuarioFixo && Senha === SenhaFixa) {
+                Mensagem.textContent = Login efetuado com sucesso!;
+            } else {
+                Mensagem.textContent = Usuário ou senha incorretos.;
+            }
+
+    </script>
+
+
+</body>
+
+</html>" -->

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>SAUDAÇÃO AO USUÁRIO!</h1>
+
+    <label for="nome">Nome de Usuário:</label>
+    <input type="text" id="NomedeUsuario" placeholder="Digite o seu Nome de Usuário!">
+    <button onclick="BotaoSaudar()">Clique aqui, para exibir sua saudação especial!</button>
+
+    <div id="Mensagem"></div>
+
+    <script>
+
+        function BotaoSaudar() {
+
+            var Nome = document.getElementById("NomedeUsuario").value.trim();
+            const DataAtual = new Date();
+            const Hora = DataAtual.getHours();
+            const Minutos = DataAtual.getMinutes();
+            const MensagemDiv = document.getElementById("Mensagem");
+
+            var Saudacao = " "
+
+            if (Hora >= 5 && Hora < 12) {
+                Saudacao = "Bom dia";
+            } else if (Hora >= 12 && Hora < 18) {
+                Saudacao = "Boa tarde";
+            } else {
+                Saudacao = "Boa noite";
+            }
+
+            if (Nome) {
+                MensagemDiv.textContent = Saudacao + ", " + Nome + "! " + "Seja bem-vindo(a) ao nosso sistema, às " + Hora + "h" + Minutos + "min.";
+            } else {
+                MensagemDiv.textContent = "Por favor, digite o seu Nome de Usuário.";
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>
+
+
+<!-- PROMPT CHATGPT: "Preciso criar em javascript um sistema para saudação de usuário no qual conste um input com o nome do usuário um botão para acionar e uma div com uma mensagem personalizada de acordo com o horário. Precisa usar uma variável date." -->
