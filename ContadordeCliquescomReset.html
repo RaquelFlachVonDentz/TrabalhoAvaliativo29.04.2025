@@ -10,7 +10,7 @@
 
     <h2>Clique até cansar ou desestressar, hehehehehe!</h2>
     
-    <div id="Resultado">0</div>
+    <div id="Resultado">O número total de clique é: 0</div>
     
     <button id="BotaoCliques">Clique!</button>
     <button id="BotaoReset">Limpar.</button>
@@ -30,7 +30,7 @@
     
         BotaoReset.addEventListener("click", () => {
             Resultado = 0
-            divResultado.textContent = Resultado;
+            divResultado.textContent = "O número total de clique é: " + Resultado;
         });
       </script>    
 </body>
